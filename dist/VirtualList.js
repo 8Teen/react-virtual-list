@@ -27,7 +27,7 @@ var VirtualList = React.createClass({displayName: "VirtualList",
             height: 0
         };
         
-        // early return if nothing to render
+        // early return if nothing to render...
         if (typeof props.container === 'undefined' || props.items.length === 0 || props.itemHeight <= 0 || !this.isMounted()) return state;
         
         var items = props.items;
