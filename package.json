@@ -1,13 +1,18 @@
 {
+<<<<<<< HEAD
   "name": "react-virtual-list",
   "version": "1.5.1",
+=======
+  "name": "react-virtual-list-example",
+  "version": "1.3.1",
+>>>>>>> b0ed4d62b60d9a5f6aecbf72a6ea18182d964ba9
   "description": "Super simple virtualized list React component",
   "main": "dist/VirtualList.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build": "gulp default",
+    "build": "browserify -t reactify App.jsx | uglifyjs -c > app.min.js",
     "test": "jasmine-node test --verbose --matchall"
   },
   "repository": {
@@ -27,11 +32,16 @@
   },
   "homepage": "https://github.com/developerdizzle/react-virtual-list",
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-virtual-list": "^1.5.1"
   },
   "devDependencies": {
+    "browserify": "^10.2.1",
     "gulp": "^3.8.11",
     "gulp-react": "^3.0.1",
-    "jasmine-node": "^1.14.5"
+    "jasmine-node": "^1.14.5",
+    "reactify": "^1.1.1",
+    "run-sequence": "^1.1.0",
+    "uglifyjs": "^2.4.10"
   }
 }
